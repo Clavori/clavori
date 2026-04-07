@@ -190,6 +190,16 @@ body {
     overflow: hidden;
 }
 
+#hero-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
 .hero-content {
     text-align: center;
     width: 100%;
@@ -367,54 +377,69 @@ body {
 }
 
 .portfolio-item {
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
     position: relative;
     border: 1px solid var(--border-color);
-    aspect-ratio: 4/3;
+    background: rgba(255, 255, 255, 0.02);
+    transition: var(--transition);
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-item:hover {
+    border-color: rgba(0, 243, 255, 0.3);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 243, 255, 0.1);
+    background: rgba(0, 243, 255, 0.02);
+}
+
+.portfolio-img-container {
+    aspect-ratio: 16/10;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
 .portfolio-img {
     width: 100%;
     height: 100%;
     background-size: cover;
-    background-position: center;
+    background-position: top center;
     transition: transform 0.5s ease;
 }
 
-.portfolio-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.portfolio-item:hover .portfolio-img {
+    transform: scale(1.05);
+}
+
+.portfolio-content {
+    padding: 25px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: rgba(1, 1, 2, 0.85); /* Fundo escuro dramático */
-    backdrop-filter: blur(5px);
-    opacity: 0;
-    transition: var(--transition);
+    flex-grow: 1;
 }
 
-.portfolio-item:hover .portfolio-img {
-    transform: scale(1.1);
-}
-
-.portfolio-item:hover .portfolio-overlay {
-    opacity: 1;
-}
-
-.portfolio-overlay h4 {
-    font-size: 1.3rem;
+.portfolio-content h4 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
     margin-bottom: 5px;
 }
 
-.portfolio-overlay p {
+.portfolio-content .portfolio-tag {
     color: var(--accent-neon);
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.portfolio-content .portfolio-desc {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
 /* About */

@@ -1,0 +1,38 @@
+﻿{
+  "status": "success",
+  "result": [
+    {
+      "projectId": "clavori-f6c32",
+      "projectNumber": "522247929005",
+      "displayName": "Clavori",
+      "name": "projects/clavori-f6c32",
+      "resources": {
+        "hostingSite": "clavori-f6c32"
+      },
+      "state": "ACTIVE",
+      "etag": "1_be8b091e-43d0-44d7-a3cb-4f3ce564a0b3"
+    },
+    {
+      "projectId": "horafacil-71dbb",
+      "projectNumber": "768284219651",
+      "displayName": " HoraFacil",
+      "name": "projects/horafacil-71dbb",
+      "resources": {
+        "hostingSite": "horafacil-71dbb"
+      },
+      "state": "ACTIVE",
+      "etag": "1_5633dacb-1c41-430a-9148-e791f636d6b3"
+    },
+    {
+      "projectId": "orcafacil-55ba3",
+      "projectNumber": "250037518988",
+      "displayName": "orcafacil",
+      "name": "projects/orcafacil-55ba3",
+      "resources": {
+        "hostingSite": "orcafacil-55ba3"
+      },
+      "state": "ACTIVE",
+      "etag": "1_be6ceaaa-d73a-401a-aa67-2ec5046bbf17"
+    }
+  ]
+}
